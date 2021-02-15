@@ -6,8 +6,9 @@ public class Second {
     public static void main(String[] args) {
         String old= "big black bug bit a big black dog on his big black nose";
 
-        String[] characters=old.split(" ");
         old=old.toLowerCase();
+        String[] characters=old.split(" ");
+       
 
         for (int i=0;i<characters.length;i++){
             int count=1;
