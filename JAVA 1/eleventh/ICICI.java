@@ -1,5 +1,8 @@
 package eleventh;
 
 public class ICICI extends Bank {
-    int getRateOfInterest(){return 8;}
+    void getDetails(String s){
+        System.out.println("Bank Name:" + s+" roi:6%");
+    }
 }
+
