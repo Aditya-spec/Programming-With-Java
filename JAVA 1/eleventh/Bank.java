@@ -2,5 +2,5 @@ package eleventh;
 
 public abstract class Bank {
 
-    abstract int getRateOfInterest();
+    abstract void getDetails(String s);
 }
