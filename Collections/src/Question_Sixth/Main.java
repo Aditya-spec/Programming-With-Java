@@ -18,15 +18,16 @@ public class Main {
             }
         }
         ArrayList<Map.Entry<Integer, Integer>> listOfEntry = new ArrayList<>(elementCountMap.entrySet());
-        Collections.sort(listOfEntry, new Comparator<Map.Entry<Integer, Integer>>()
-                {
-                    @Override
-                    public int compare(Map.Entry<Integer, Integer> o1, Map.Entry<Integer, Integer> o2)
-                    {
-                        return o2.getValue().compareTo(o1.getValue());
-                    }
-                }
-        );
+//         Collections.sort(listOfEntry, new Comparator<Map.Entry<Integer, Integer>>()
+//                 {
+//                     @Override
+//                     public int compare(Map.Entry<Integer, Integer> o1, Map.Entry<Integer, Integer> o2)
+//                     {
+//                         return o2.getValue().compareTo(o1.getValue());
+//                     }
+//                 }
+//         );
+        Collections.sort(listOfEntry,(o1,o2)->o1.getKey().compareTo(o2.getKey()));
         System.out.println("Input Array : "+Arrays.toString(inputArray));
         System.out.println("Sorted Array Elements In Descending Order Of Their Frequency :");
         System.out.print("[ ");
