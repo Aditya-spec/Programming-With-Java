@@ -1,13 +1,15 @@
-//Write a program to sort the Student objects based on Score ,
+
+  //Write a program to sort the Student objects based on Score ,
 // if the score are same then sort on First Name .
 // Class Student{ String Name; Double Score; Double Age
 package Question_Fifth;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-class Student implements Comparable<Student> {
+class Student {
     String name;
     Double age;
     Double score;
@@ -51,12 +53,13 @@ class Student implements Comparable<Student> {
         this.score = score;
     }
 
-    @Override
-    public int compareTo(Student student) {
-if(this.score>student.score)return -1;
-else if(this.score<student.score) return 1;
-        return this.name.compareTo(student.name);
-    }
+//    @Override
+//    public int compareTo(Student student) {
+//if(this.score>student.score)return -1;
+//else if(this.score<student.score) return 1;
+//        return this.name.compareTo(student.name);
+//    }
+//}
 }
 public class Fifth {
     public static void main(String[] args) {
@@ -67,7 +70,11 @@ public class Fifth {
         students.add(new Student("Delta",24.0,69.0));
         students.add(new Student("Mike",23.0,56.0));
         students.add(new Student("Bravo",24.0,45.0));
-        Collections.sort(students);
+        //Collections.sort(students);
+        Comparator<Student> compare_score_name=Comparator
+                .comparing(Student::getScore)
+                .thenComparing(Student::getName);
+        Collections.sort(students,compare_score_name);
         students.forEach(System.out::println);
     }
 }
