@@ -3,31 +3,32 @@
 public class Seventh
 {
 
-    static void ConvertSectoDay(int n)
+    static void Convert(int n)
     {
-        int day = n / (24 * 3600);
+        int cal_day=24*3600;
+        int day = n / cal_day;
 
-        n = n % (24 * 3600);
+        n = n % cal_day;
         int hour = n / 3600;
 
-        n %= 3600;
+        n =n% 3600;
         int minutes = n / 60 ;
 
-        n %= 60;
+        n =n% 60;
         int seconds = n;
 
         System.out.println( day + " " + "days " + hour
-                + " " + "hours " + minutes + " "
-                + "minutes " + seconds + " "
-                + "seconds ");
-    }
+                                                    + " " + "hours " + minutes + " "
+                                                    + "minutes " + seconds + " "
+                                                    + "seconds ");
+                                        }
 
 
     public static void main (String[] args)
     {
 
-        int n = 6353470;
-        ConvertSectoDay(n);
+        int n = 5765446;
+        Convert(n);
 
     }
 }
