@@ -1,6 +1,6 @@
 //Create a custom exception that do not have any stack trace.
 class Agenotvalidexception extends Exception{
-    public agenotvalidexception(String msg){
+    public Agenotvalidexception(String msg){
         super(msg);
     }
 }
