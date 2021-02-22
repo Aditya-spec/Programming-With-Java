@@ -1,5 +1,5 @@
 //Create a custom exception that do not have any stack trace.
-class agenotvalidexception extends Exception{
+class Agenotvalidexception extends Exception{
     public agenotvalidexception(String msg){
         super(msg);
     }
@@ -10,7 +10,7 @@ public class Thirteen {
 
         try {
             if (age < 18)
-                throw new agenotvalidexception(" your age is not valid");
+                throw new Agenotvalidexception(" your age is not valid");
 
             else
                 System.out.println("proceed");
