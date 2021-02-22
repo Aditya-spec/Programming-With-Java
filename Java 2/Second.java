@@ -1,23 +1,23 @@
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
 //WAP to sorting string without using string Methods?.
 public class Second {
     public static void main(String[] args) {
-        String str = "java programming in intellij";
-        System.out.println("Before Sorting:" + str);
-        int j = 0;
-        char temp = 0;
-        char[] chars = str.toCharArray();
-        for(int i=0; i < chars.length; i++) {
-            for(j=0; j < chars.length; j++) {
-                if(chars[j] > chars[i]) {
-                    temp = chars[i];
-                    chars[i] = chars[j];
-                    chars[j] = temp;
-                }
-            }
+
+        String str="Hello to java Programming";
+        String[] arr= str.split(" ");
+        List<String> list=new ArrayList<String>();
+        for(String val:arr){
+        list.add(val);
         }
-        System.out.println("After Sorting:");
-        for(int k=0; k < chars.length; k++) {
-            System.out.println(chars[k]);
-        }
+       
+        List<String> newList=list.stream().sorted( String::compareTo).collect(Collectors.toList());
+        System.out.println(newList);
+
     }
 }
